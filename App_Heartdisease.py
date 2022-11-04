@@ -106,7 +106,7 @@ def questionair():
     st.session_state["data"]["Diabetic"] = [int(Diabetic == "Ja")]
 
     # physical activity
-    PhysicalActivity = st.radio("Bent u physisch actief geweest buiten uw baan om ? (bijvooreeld sporten) ", ["Ja", "Nee"])
+    PhysicalActivity = st.radio("Bent u fysiek actief geweest buiten uw baan om ? (bijvooreeld sporten) ", ["Ja", "Nee"])
     st.session_state["data"]["PhysicalActivity"] = [int(PhysicalActivity == "Ja")]
 
     # Asthma
@@ -130,7 +130,7 @@ def questionair():
     st.session_state["data"]["Stroke"] = [int(Stroke == "Ja")]
 
     #Psychische gezondheid
-    p_gezondheid = st.session_state["data"]["PhysicalHealth"] = [st.slider("In de afgelopen 30 dagen, hoeveel heeft u zich psychisch 'slecht' gevoeld ? (0 = Weinig, 30 = Veel)",
+    p_gezondheid = st.session_state["data"]["PhysicalHealth"] = [st.slider("In de afgelopen 30 dagen, hoeveel heeft u zich fysiek 'slecht' gevoeld ? (0 = Weinig, 30 = Veel)",
                                                         0, 30)/30]
     st.write("Ik heb me de afgelopen 30 dagen,", p_gezondheid[0]*30, 'dagen slecht gevoeld.')
 
