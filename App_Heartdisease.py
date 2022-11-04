@@ -1,6 +1,6 @@
-from turtle import onclick
 
-import keras.models
+
+import tensorflow as tf
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -183,7 +183,7 @@ def results():
         st.session_state["page"]= "questionair"
 
     def result():
-        model = keras.models.load_model("./model")
+        model = tf.keras.models.load_model("./model")
         data = st.session_state["data"]
         result = model.predict(pd.DataFrame(data))
         return result
